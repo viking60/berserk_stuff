@@ -1,4 +1,0 @@
-*/tmp
-*/.config/gsmartcontrol/*
-*/.cache
-*/.gvfs
