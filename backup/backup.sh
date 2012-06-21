@@ -1,5 +1,21 @@
 #!/bin/bash
-cd /home/<your_name>
-for i in `cat viking.backup`; 
-do rsync -azrvv --delete --delete-excluded  --exclude-from 'ex.txt'  $i /media/MyHD/My_backup/; 
+if [ -e 'ex.txt' ]
+then
+echo "ex.txt exists"
+else
+echo '#Here you can put the all the files and directories you do not want to backup. Like the example below:'>>ex.txt
+echo '*/.gvfs'>>ex.txt
+echo "ex.txt has been created"
+fi
+if [ -e 'viking.backup' ]
+then
+echo "viking.backup exists"
+else
+echo '#Here you can put the all the files and directories you want to backup'>>viking.backup
+fi
+cd ~/
+for i in `cat viking.backup`;
+do rsync -azrv --delete --delete-excluded  --exclude-from 'ex.txt'  $i /media/<your media>/<your path>/;#put you backup media in here
+echo -n 'The last backup at the bottom:'>>backup.log|date +'%d-%m-%Y klokken %H:%M'>>backup.log
 done
+
