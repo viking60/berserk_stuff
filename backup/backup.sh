@@ -13,7 +13,7 @@ echo "viking.backup exists"
 else
 echo '#Here you can put the all the files and directories you want to backup'>>viking.backup
 fi
-cd ~/
+cd /home/<USER>
 for i in `cat viking.backup`;
 do rsync -azrv --delete --delete-excluded  --exclude-from 'ex.txt'  $i /media/<your media>/<your path>/;#put you backup media in here
 echo -n 'The last backup at the bottom:'>>backup.log|date +'%d-%m-%Y klokken %H:%M'>>backup.log
