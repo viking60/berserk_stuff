@@ -31,9 +31,9 @@ echo $hjem>>viking.backup #Creates viking.backup and putting </home/your_name> i
 echo '/etc'>>viking.backup #adding the /etc directory to be backed up
 fi
 #The Magic happens!
-for i in `cat viking.backup`;
+for i in $(cat viking.backup);
 do rsync -azrv --delete --delete-excluded  --exclude-from 'ex.txt'  $i $maal;
 #Creating a log (backup.log) to se when the last backup was run - nice when checking cron jobs
 echo -n 'Last backup at the bottom:'>>backup.log|date +'%d-%m-%Y klokken %H:%M'>>backup.log
 done
-#Viking says Apfelstrudel!!!
+
