@@ -18,3 +18,4 @@ for i in $(cat viking.backup);
 do rsync -azrv --delete --delete-excluded  --exclude-from 'ex.txt'  $i /media/<your media>/<your path>/;#put you backup media in here
 echo -n 'The last backup at the bottom:'>>backup.log|date +'%d-%m-%Y Time %H:%M'>>backup.log
 done
+
