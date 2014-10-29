@@ -36,4 +36,3 @@ do rsync -azrv --delete --delete-excluded  --exclude-from 'ex.txt'  $i $maal;
 #Creating a log (backup.log) to se when the last backup was run - nice when checking cron jobs
 echo -n 'Last backup at the bottom:'>>backup.log|date +'%d-%m-%Y klokken %H:%M'>>backup.log
 done
-
