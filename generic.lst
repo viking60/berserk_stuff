@@ -1,0 +1,7 @@
+# ISOs listed in this file will be detected by the generic.sh plugin, and loaded using memdisk's ISO emulation.
+# WARNING - this will almost NEVER work for a Linux boot disk!
+# Format:
+# [filename].iso    [filename].generic.iso    Default_name_on_menu
+
+hdclone.iso hdclone.generic.iso HDClone
+win7recovery-ram.iso win7recovery.generic.iso Windows_^7_Recovery_Disc_(load_ISO_to_RAM)

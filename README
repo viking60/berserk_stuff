@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 Backup script using rsync.
 Sources and excluisions in external textfiles. Discussion on http://bjoernvold.com/forum/viewtopic.php?f=11&t=1088&start=4
 -------------
+=======
+This is the git repository for MultiCD (http://multicd.tuxfamily.org).
+
+Currently, the git repository is hosted only at github:
+https://github.com/IsaacSchemm/MultiCD
+
+The MultiCD project is under the MIT license. See multicd.sh for more information. All plugins included here are under those same terms.
+>>>>>>> 440d9eb628b00c2159d0cf043e9f21fc65299c19
